@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single E-commerce Product Page using HTML, CSS - Codingscape</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/product.css">
+    <!---Boxicons CDN Setup for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="img/tshirt-1.png" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="img/tshirt-1.png" alt="" class="image-list">
+                            <img src="img/tshirt-2.png" alt="" class="image-list">
+                            <img src="img/tshirt-3.png" alt="" class="image-list">
+                            <img src="img/tshirt-group.png" alt="" class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="breadcrumb">
+                        <span><a href="/products/">Home</a></span>
+                        <span class="active">
+                            <%= data.name %>
+                        </span>
+                    </div>
+
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>
+                                <%= data.name %>
+                            </h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">(47 Review)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">
+                                <%= data.price %>
+                            </span>
+                        </div>
+
+                        <div class="product-size">
+                            <h4>Size</h4>
+                            <div class="size-layout">
+                                <input type="radio" name="size" value="<%= data.size %>" id="1" class="size-input">
+                                <label for="1" class="size">
+                                    <%= data.size %>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <input type="radio" name="color" value="<%= data.color %>" class="color-input">
+                                <label for="<%= data.color %>" class="<%= data.color %>">
+                                    <%= data.color %>
+                                </label>
+                            </div>
+                        </div>
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <div class="button buy-now"><i class='bx bxs-zap'></i> Buy Now</div>
+                            <div class="button add-cart"><i class='bx bxs-cart'></i> Add to Cart</div>
+                            <div class="button heart"><i class='bx bxs-heart'></i> Add to Wishlist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="/product.js"></script>
+</body>
+
+</html>
